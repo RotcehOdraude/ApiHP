@@ -9,9 +9,6 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 import retrofit2.http.Url
 
-/**
- * Creado por Amaury Perea Matsumura el 12/05/23
- */
 interface GamesApi {
 
     @GET
