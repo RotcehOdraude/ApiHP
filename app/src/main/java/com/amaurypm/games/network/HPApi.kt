@@ -14,9 +14,9 @@ import retrofit2.http.Url
 
 interface HPApi {
 
-    @GET("/student")
+    @GET
     fun getStudents(
-        @Url url: String?    //getStudents("api/characters/students")
+        @Url url: String?    //getStudents("api/characters")
     ): Call<ArrayList<StudentHP>>
 
     @GET("/staff")
