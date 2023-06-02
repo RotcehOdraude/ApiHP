@@ -21,7 +21,7 @@ interface HPApi {
 
     @GET("/staff")
     fun getStaff(
-        @Url url: String?    //getStudents("api/characters/students")
+        @Url url: String?    //getStudents("api/characters/staff")
     ): Call<ArrayList<StaffHP>>
 
     @GET("/api/character/{id}")    //getStudentDetail("3763783")   /api/character/{3763783}
@@ -29,7 +29,7 @@ interface HPApi {
         @Query("id") id: String?
     ): Call<StudentDetailHP>
 
-    @GET("/api/character/{id}")    //getStudentDetail("3763783")   /api/character/{3763783}
+    @GET("/api/character/{id}")    //getStaffDetail("3763783")   /api/character/{3763783}
     fun getStaffDetail(
         @Query("id") id: String?
     ): Call<StaffDetailHP>
