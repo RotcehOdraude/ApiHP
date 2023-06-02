@@ -5,10 +5,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.amaurypm.games.databinding.GameElementBinding
-import com.amaurypm.games.model.StudentHP
+import com.amaurypm.games.model.StaffHP
 import com.bumptech.glide.Glide
 
-class StudentsAdapter(private var context: Context, private var students: ArrayList<StudentHP>, private val clickListener: (StudentHP) -> Unit): RecyclerView.Adapter<StudentsAdapter.ViewHolder>() {
+class StaffAdapter(private var context: Context, private var staff: ArrayList<StaffHP>, private val clickListener: (StaffHP) -> Unit): RecyclerView.Adapter<StaffAdapter.ViewHolder>() {
 
     class ViewHolder(view: GameElementBinding): RecyclerView.ViewHolder(view.root){
         val ivStudent = view.ivThumbnail
@@ -21,20 +21,20 @@ class StudentsAdapter(private var context: Context, private var students: ArrayL
         return ViewHolder(binding)
     }
 
-    override fun getItemCount(): Int = students.size
+    override fun getItemCount(): Int = staff.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tvName.text = students[position].name
+        holder.tvName.text = staff[position].name
 
         Glide.with(context)
-            .load(students[position].image)
+            .load(staff[position].image)
             .into(holder.ivStudent)
 
         //holder.tvDeveloper.text = "EA Sports"
 
         holder.itemView.setOnClickListener {
             //Para programar los eventos click al elemento completo del ViewHolder
-            clickListener(students[position])
+            clickListener(staff[position])
         }
     }
 }
