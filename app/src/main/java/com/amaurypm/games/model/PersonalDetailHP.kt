@@ -2,7 +2,7 @@ package com.amaurypm.games.model
 
 import com.google.gson.annotations.SerializedName
 
-data class StudentDetailHP (
+data class PersonalDetailHP(
     @SerializedName("name"             ) var name            : String?           = null,
     @SerializedName("house"            ) var house           : String?           = null,
     @SerializedName("dateOfBirth"      ) var dateOfBirth     : String?           = null,
